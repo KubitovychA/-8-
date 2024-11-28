@@ -1,0 +1,17 @@
+function fibUntil(target) {
+  let a = 0, b = 1;
+  
+  // Виведення початкових чисел послідовності Фібоначчі
+  if (target >= 0) console.log(a);
+  if (target >= 1) console.log(b);
+
+  // Генерація наступних чисел до досягнення target
+  let nextFib = a + b;
+  while (nextFib <= target) {
+    console.log(nextFib);
+    [a, b] = [b, nextFib]; // одночасне присвоєння нових значень a та b
+    nextFib = a + b;
+  }
+}
+
+fibUntil(1000000);
